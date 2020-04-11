@@ -12,6 +12,12 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+# Service AND deployment annotations
+annotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/path: /metrics
+  prometheus.io/port: "3000"
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
